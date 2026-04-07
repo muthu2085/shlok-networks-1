@@ -87,9 +87,27 @@
       transform: scale(0.9);
     }
 
-    .service-tab:hover .hover-image {
+    .service-tab.is-expanded .hover-image {
       opacity: 1;
       transform: scale(1);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .service-tab:hover .hover-image {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .hover-image {
+        position: static;
+        width: 100%;
+        height: 220px;
+        margin-top: 1rem;
+        opacity: 0;
+        transform: scale(0.98);
+      }
     }
 
     .hover-img {
@@ -1206,52 +1224,98 @@
 <!-- FOOTER SECTION -->
 <footer id="contact" class="bg-[#0f2346] text-white pt-20 pb-10 relative mt-20">
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10 relative z-10">
+    
+    <!-- ABOUT -->
     <div>
       <div class="flex items-center gap-2 mb-4">
-        <svg width="36" height="36" fill="none" viewBox="0 0 36 36"><rect width="36" height="36" rx="8" fill="#fff"/><path d="M10 18l8-8 8 8" stroke="#0f2346" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 26l8-8 8 8" stroke="#0f2346" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span class="font-bold text-xl">insul</span>
+        <span class="font-bold text-xl">Shlok Networks</span>
       </div>
-      <p class="mb-4 text-white/80">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-      <form class="flex items-center bg-white/10 rounded-full px-2 py-1">
-        <input type="email" placeholder="Your email address" class="bg-transparent outline-none px-3 py-2 text-white flex-1 placeholder-white/70">
-        <button type="submit" class="bg-white text-[#0f2346] rounded-full p-2 ml-2 hover:bg-blue-100 transition">
-          <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 10h10m0 0l-4-4m4 4l-4 4" stroke="#0f2346" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-      </form>
-      <p class="mt-6 text-xs text-white/60">Copyright © 2024 Insul. All right reserved.</p>
+      <p class="mb-4 text-white/80">
+        Shlok Networks is a creative branding and signage company delivering innovative visual solutions for businesses. We help brands stand out through impactful design, quality production, and professional execution.
+      </p>
+      <p class="mt-6 text-xs text-white/60">
+        Copyright © 2024 Shlok Networks. All rights reserved.
+      </p>
     </div>
+
+    <!-- QUICK LINKS -->
     <div>
-      <h4 class="font-bold mb-4">Contact Infor</h4>
+      <h4 class="font-bold mb-4">Quick Links</h4>
       <ul class="space-y-2 text-white/80">
-        <li><a href="#" class="hover:underline">Contact us</a></li>
-        <li><a href="#" class="hover:underline">About us</a></li>
-        <li><a href="#" class="hover:underline">Our impact</a></li>
-        <li><a href="#" class="hover:underline">Our values</a></li>
-        <li><a href="#" class="hover:underline">Resources</a></li>
-        <li><a href="#" class="hover:underline">Videos</a></li>
+        <li><a href="#" class="hover:underline">Home</a></li>
+        <li><a href="#" class="hover:underline">About Us</a></li>
+        <li><a href="#" class="hover:underline">How We Work</a></li>
+        <li><a href="#" class="hover:underline">Services</a></li>
+        <li><a href="#" class="hover:underline">Testimonials</a></li>
+        <li><a href="#" class="hover:underline">Team</a></li>
       </ul>
     </div>
-    <div>
-      <h4 class="font-bold mb-4">Useful Links</h4>
-      <ul class="space-y-2 text-white/80">
-        <li><a href="#" class="hover:underline">Audit & Assurance</a></li>
-        <li><a href="#" class="hover:underline">Consulting</a></li>
-        <li><a href="#" class="hover:underline">Risk Advisory</a></li>
-        <li><a href="#" class="hover:underline">Financial Advisory</a></li>
-        <li><a href="#" class="hover:underline">Legal</a></li>
-        <li><a href="#" class="hover:underline">Tax</a></li>
-      </ul>
-    </div>
+
+   
+
+    <!-- CONNECT -->
     <div>
       <h4 class="font-bold mb-4">Connect</h4>
-      <p class="mb-4 text-white/80">Connect to us to update more information that help you</p>
-      <div class="flex gap-4">
-        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition"><svg width="20" height="20" fill="none" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14.5A6.5 6.5 0 1110 3.5a6.5 6.5 0 010 13z" fill="#fff"/></svg></a>
-        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition"><svg width="20" height="20" fill="none" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14.5A6.5 6.5 0 1110 3.5a6.5 6.5 0 010 13z" fill="#fff"/></svg></a>
-        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition"><svg width="20" height="20" fill="none" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14.5A6.5 6.5 0 1110 3.5a6.5 6.5 0 010 13z" fill="#fff"/></svg></a>
+
+      <!-- ADDRESS -->
+      <p class="text-white/80 mb-3">
+        123 Business Street,<br>
+        Chennai, Tamil Nadu 600001<br>
+        India
+      </p>
+
+      <!-- CONTACT INFO -->
+      <p class="text-white/80 mb-4">
+        Email: info@shloknetworks.com<br>
+        Phone: +91 98765 43210
+      </p>
+
+      <!-- SOCIAL MEDIA -->
+      <div class="flex gap-4 mb-6">
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+          <!-- Facebook -->
+          <svg width="18" height="18" fill="white" viewBox="0 0 24 24">
+            <path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.5.7-1.5 1.5V12H17l-.4 3h-2.7v7A10 10 0 0022 12z"/>
+          </svg>
+        </a>
+
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+          <!-- Instagram -->
+          <svg width="18" height="18" fill="white" viewBox="0 0 24 24">
+            <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5a5 5 0 110 10 5 5 0 010-10zm6.5-.8a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/>
+          </svg>
+        </a>
+
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+          <!-- LinkedIn -->
+          <svg width="18" height="18" fill="white" viewBox="0 0 24 24">
+            <path d="M6.94 6.5A1.94 1.94 0 115 4.56 1.94 1.94 0 016.94 6.5zM4.5 8h3v12h-3zM10 8h2.8v1.7h.04a3.07 3.07 0 012.76-1.5c3 0 3.5 2 3.5 4.6V20h-3v-5.5c0-1.3 0-3-1.9-3s-2.2 1.5-2.2 2.9V20h-3z"/>
+          </svg>
+        </a>
+
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+          <!-- YouTube -->
+          <svg width="18" height="18" fill="white" viewBox="0 0 24 24">
+            <path d="M21.6 7.2s-.2-1.5-.8-2.1c-.7-.8-1.5-.8-1.9-.9C16.2 4 12 4 12 4s-4.2 0-6.9.2c-.4 0-1.2.1-1.9.9-.6.6-.8 2.1-.8 2.1S2 9 2 10.8v1.4C2 14 2.4 16 2.4 16s.2 1.5.8 2.1c.7.8 1.6.8 2 .9 1.5.1 6.8.2 6.8.2s4.2 0 6.9-.2c.4 0 1.2-.1 1.9-.9.6-.6.8-2.1.8-2.1s.4-2 .4-3.8v-1.4c0-1.8-.4-3.8-.4-3.8zM10 14.5v-5l5 2.5-5 2.5z"/>
+          </svg>
+        </a>
       </div>
+
+     
+    </div>
+ <!-- SERVICES -->
+    <div>
+      <h4 class="font-bold mb-4">Subscribe</h4>
+       <!-- SUBSCRIBE -->
+      <form class="px-2 py-1">
+        <input type="email" placeholder="Your email" class="bg-white/10 rounded-full outline-none px-3 py-2 text-white flex-1 placeholder-white/70">
+        <button type="submit" class="mt-5 bg-white text-[#0f2346] rounded-full px-4 py-2 ml-2 hover:bg-blue-100 transition">
+          Subscribe
+        </button>
+      </form>
     </div>
   </div>
+
   <div class="absolute right-0 bottom-0 w-1/2 h-40 bg-white/10 rounded-tl-[120px] z-0"></div>
 </footer>
     <script>
@@ -1415,44 +1479,82 @@
             "03": "https://images.unsplash.com/photo-1505751172676-41adad7e17c3?auto=format&fit=crop&q=80&w=800"
         };
         const defaultImage = "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800";
+        const desktopHoverMedia = window.matchMedia('(hover: hover) and (pointer: fine)');
+        let imageTransitionTimeout;
+
+        function updateServiceImage(src) {
+            clearTimeout(imageTransitionTimeout);
+            serviceImg.style.opacity = '0';
+            imageTransitionTimeout = setTimeout(() => {
+                serviceImg.src = src;
+                serviceImg.style.opacity = '1';
+            }, 200);
+        }
+
+        function expandTab(tab) {
+            const id = tab.getAttribute('data-target');
+
+            tab.classList.add('is-expanded');
+            tab.querySelector('.tab-desc').classList.remove('hidden');
+            tab.querySelector('.tab-number').classList.replace('text-slate-400', 'text-[#ee1c25]');
+            tab.querySelector('.tab-title').classList.add('text-blue-900');
+            tab.querySelector('i').className = 'fa-solid fa-arrow-up-right-from-square text-[#ee1c25]';
+            tab.querySelector('.hover-img').src = images[id];
+            updateServiceImage(images[id]);
+        }
+
+        function collapseTab(tab, restoreDefaultImage = false) {
+            tab.classList.remove('is-expanded');
+            tab.querySelector('.tab-desc').classList.add('hidden');
+            tab.querySelector('.tab-number').classList.replace('text-[#ee1c25]', 'text-slate-400');
+            tab.querySelector('.tab-title').classList.remove('text-blue-900');
+            tab.querySelector('i').className = 'fa-solid fa-arrow-up-right-from-square text-slate-300';
+            tab.querySelector('.hover-img').src = '';
+
+            if (restoreDefaultImage) {
+                updateServiceImage(defaultImage);
+            }
+        }
+
+        function collapseOtherTabs(activeTab) {
+            tabs.forEach(tab => {
+                if (tab !== activeTab) {
+                    collapseTab(tab);
+                }
+            });
+        }
+
         tabs.forEach(tab => {
             tab.addEventListener('mouseenter', () => {
-                // Activate hovered tab
-                const id = tab.getAttribute('data-target');
-                tab.querySelector('.tab-desc').classList.remove('hidden');
-                tab.querySelector('.tab-number').classList.replace('text-slate-400', 'text-[#ee1c25]');
-                tab.querySelector('.tab-title').classList.add('text-blue-900');
-                tab.querySelector('i').className = 'fa-solid fa-arrow-up-right-from-square text-[#ee1c25]';
-                
-                // Update Image with fade effect
-                serviceImg.style.opacity = '0';
-                setTimeout(() => {
-                    serviceImg.src = images[id];
-                    serviceImg.style.opacity = '1';
-                }, 200);
-
-                // Set hover image
-                tab.querySelector('.hover-img').src = images[id];
+                if (!desktopHoverMedia.matches) return;
+                collapseOtherTabs(tab);
+                expandTab(tab);
             });
 
             tab.addEventListener('mouseleave', () => {
-                // Reset tab
-                tab.querySelector('.tab-desc').classList.add('hidden');
-                tab.querySelector('.tab-number').classList.replace('text-[#ee1c25]', 'text-slate-400');
-                tab.querySelector('.tab-title').classList.remove('text-blue-900');
-                tab.querySelector('i').className = 'fa-solid fa-arrow-up-right-from-square text-slate-300';
-                
-                // Reset Image
-                serviceImg.style.opacity = '0';
-                setTimeout(() => {
-                    serviceImg.src = defaultImage;
-                    serviceImg.style.opacity = '1';
-                }, 200);
+                if (!desktopHoverMedia.matches) return;
+                collapseTab(tab, true);
+            });
 
-                // Reset hover image
-                tab.querySelector('.hover-img').src = '';
+            tab.addEventListener('click', () => {
+                if (desktopHoverMedia.matches) return;
+
+                const isExpanded = tab.classList.contains('is-expanded');
+                collapseOtherTabs(tab);
+
+                if (isExpanded) {
+                    collapseTab(tab, true);
+                    return;
+                }
+
+                expandTab(tab);
             });
         });
+
+        if (!desktopHoverMedia.matches && tabs.length) {
+            collapseOtherTabs(tabs[0]);
+            expandTab(tabs[0]);
+        }
 
         // Accordion Logic
         function toggleAccordion(element) {
