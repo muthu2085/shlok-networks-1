@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industries We Serve | Shlok Networks</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --brand-navy: #0f2346;
+      --brand-red: #ee1c25;
+      --soft-bg: #f8fafc;
+      --ink: #1f2937;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Instrument Sans', sans-serif;
+      color: var(--ink);
+      background: var(--soft-bg);
+    }
+
+    .section-space {
+      padding-top: 5.5rem;
+      padding-bottom: 5.5rem;
+    }
+
+    .title-lg {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      line-height: 1.06;
+      letter-spacing: -0.02em;
+    }
+
+    .title-md {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+
+    .accent-bar {
+      position: relative;
+      display: inline-block;
+    }
+
+    .accent-bar::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -0.35rem;
+      height: 0.28rem;
+      background: var(--brand-red);
+      border-radius: 999px;
+    }
+
+    .hero-glow {
+      background:
+        radial-gradient(circle at 12% 12%, rgba(238, 28, 37, 0.14), transparent 34%),
+        radial-gradient(circle at 88% 12%, rgba(15, 35, 70, 0.15), transparent 36%),
+        linear-gradient(145deg, #ffffff 0%, #f2f6fb 55%, #ecf2fa 100%);
+    }
+
+    .card-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-lift:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 45px rgba(15, 35, 70, 0.12);
+    }
+
+    .industry-panel {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .industry-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(238, 28, 37, 0.06), rgba(15, 35, 70, 0.02));
+      pointer-events: none;
+    }
+
+    nav a.active {
+      color: var(--brand-red);
+    }
+  </style>
+</head>
+
+<body>
+  <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur border-b border-slate-100 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="img/logo-shlok-networks.png" alt="Shlok Networks Logo" class="h-10" />
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="index.html#home" class="text-gray-700 hover:text-[#ee1c25] font-medium transition">Home</a>
+        <a href="aboutus.html" class="text-gray-700 hover:text-[#ee1c25] font-medium transition">About Us</a>
+        <a href="capabilities.html" class="text-gray-700 hover:text-[#ee1c25] font-medium transition">Capabilities</a>
+        <a href="industries-we-serve.html" class="active text-gray-700 hover:text-[#ee1c25] font-medium transition">Industries</a>
+        <a href="engagement-model.html" class="text-gray-700 hover:text-[#ee1c25] font-medium transition">Engagement Model</a>
+      </nav>
+
+      <a href="index.html#contact" class="hidden md:block bg-[#ee1c25] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#d71720] transition">Get Started</a>
+
+      <button class="md:hidden text-gray-700" id="mobile-menu-btn" aria-label="Open menu">
+        <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="md:hidden bg-white border-t border-gray-200 hidden" id="mobile-menu">
+      <nav class="px-6 py-4 flex flex-col gap-4">
+        <a href="index.html#home" class="text-gray-700 hover:text-[#ee1c25] font-medium transition">Home</a>
+        <a href="aboutus.html" class="text-gray-700 hover:text-[#ee1c25] font-medium transition">About Us</a>
+        <a href="capabilities.html" class="text-gray-700 hover:text-[#ee1c25] font-medium transition">Capabilities</a>
+        <a href="industries-we-serve.html" class="text-[#ee1c25] font-medium transition">Industries</a>
+        <a href="engagement-model.html" class="text-gray-700 hover:text-[#ee1c25] font-medium transition">Engagement Model</a>
+        <a href="index.html#contact" class="bg-[#ee1c25] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#d71720] transition mt-2 text-center">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-20">
+    <section class="hero-glow overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 section-space grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7">
+          <p class="text-[#ee1c25] text-sm tracking-[0.18em] font-semibold uppercase mb-5">Industries We Serve</p>
+          <h1 class="title-lg text-[#0f2346] font-extrabold mb-6">
+            Engineering Support Across
+            <span class="accent-bar">High-Stakes Industry Environments</span>
+          </h1>
+          <p class="text-lg text-slate-600 leading-relaxed max-w-2xl">
+            Shlok Networks supports organizations operating in demanding sectors where reliability, safety, scalability, and performance are essential. Our engineering guidance adapts to the realities of each domain while keeping architecture decisions aligned with long-term operational needs.
+          </p>
+
+          <div class="mt-10 grid sm:grid-cols-3 gap-4 max-w-3xl">
+            <div class="bg-white/80 border border-white rounded-2xl p-4 shadow-sm">
+              <p class="text-3xl font-extrabold text-[#0f2346]">5</p>
+              <p class="text-sm text-slate-600 mt-1">Core industries featured on this page</p>
+            </div>
+            <div class="bg-white/80 border border-white rounded-2xl p-4 shadow-sm">
+              <p class="text-3xl font-extrabold text-[#0f2346]">Mission-Critical</p>
+              <p class="text-sm text-slate-600 mt-1">Support shaped around uptime, safety, and operational resilience</p>
+            </div>
+            <div class="bg-white/80 border border-white rounded-2xl p-4 shadow-sm">
+              <p class="text-3xl font-extrabold text-[#0f2346]">Multi-Domain</p>
+              <p class="text-sm text-slate-600 mt-1">Cross-sector engineering perspective that transfers proven patterns</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 relative">
+          <div class="absolute -top-6 -right-6 w-44 h-44 rounded-full bg-[#ee1c25]/10"></div>
+          <img src="img/datacenter.jpg" alt="Industries served by Shlok Networks" class="relative z-10 rounded-3xl shadow-xl w-full object-cover border border-white" />
+          <div class="absolute -bottom-6 left-5 z-20 bg-white rounded-2xl shadow-lg p-4 max-w-[230px] border border-slate-100">
+            <p class="text-xs uppercase tracking-wider text-slate-500">Industry Lens</p>
+            <p class="text-sm font-semibold text-[#0f2346] mt-1">Sector-specific context paired with strong systems thinking.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-12 gap-12 items-start">
+          <div class="lg:col-span-4">
+            <p class="text-[#ee1c25] text-sm tracking-[0.16em] font-semibold uppercase mb-4">Industry Expertise</p>
+            <h2 class="title-md font-extrabold text-[#0f2346]">Built for Engineering Conditions That Leave Little Room for Error</h2>
+          </div>
+          <div class="lg:col-span-8 space-y-5 text-slate-700 text-lg leading-relaxed">
+            <p>Each industry brings different operating pressures, regulatory expectations, performance targets, and integration challenges. Our role is to help engineering teams navigate those realities with stronger architecture decisions and clearer execution priorities.</p>
+            <p>From transportation and defense to healthcare, telecom, and industrial systems, we support organizations where technical reliability is directly tied to business continuity, user safety, and long-term platform value.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space bg-slate-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl mb-12">
+          <p class="text-[#ee1c25] text-sm tracking-[0.16em] font-semibold uppercase mb-4">Industry Segments</p>
+          <h2 class="title-md font-extrabold text-[#0f2346]">Where Shlok Supports Engineering Teams</h2>
+        </div>
+
+        <div class="space-y-8">
+          <article class="industry-panel card-lift bg-white border border-slate-100 rounded-3xl p-8 lg:p-10">
+            <div class="relative z-10 grid lg:grid-cols-12 gap-8 items-center">
+              <div class="lg:col-span-5">
+                <img src="img/automative.jpg" alt="Automotive engineering" class="rounded-3xl w-full h-[320px] object-cover shadow-lg" />
+              </div>
+              <div class="lg:col-span-7">
+                <p class="text-xs font-semibold text-[#ee1c25] tracking-[0.16em]">01</p>
+                <h3 class="text-2xl font-extrabold text-[#0f2346] mt-3">Automotive</h3>
+                <p class="text-slate-600 mt-4 text-lg leading-relaxed">Automotive systems require highly reliable engineering architectures capable of handling dynamic load conditions and safety requirements.</p>
+                <p class="text-slate-600 mt-3 text-lg leading-relaxed">Shlok supports EV platforms, ICE systems, and vehicle electronics development.</p>
+                <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                  <a href="index.html#services" class="bg-[#ee1c25] text-white px-6 py-3 rounded-full font-semibold text-center hover:bg-[#d71720] transition">Explore Automotive Engineering</a>
+                  <a href="index.html#contact" class="border border-slate-300 text-[#0f2346] px-6 py-3 rounded-full font-semibold text-center hover:bg-white transition">Discuss EV Architecture</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="industry-panel card-lift bg-white border border-slate-100 rounded-3xl p-8 lg:p-10">
+            <div class="relative z-10 grid lg:grid-cols-12 gap-8 items-center">
+              <div class="lg:col-span-7 lg:order-1 order-2">
+                <p class="text-xs font-semibold text-[#ee1c25] tracking-[0.16em]">02</p>
+                <h3 class="text-2xl font-extrabold text-[#0f2346] mt-3">Defense</h3>
+                <p class="text-slate-600 mt-4 text-lg leading-relaxed">Defense systems demand uncompromised reliability and mission-critical performance.</p>
+                <p class="text-slate-600 mt-3 text-lg leading-relaxed">Shlok supports engineering systems across ground-based, mobile, naval, and airborne applications.</p>
+                <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                  <a href="index.html#contact" class="bg-[#ee1c25] text-white px-6 py-3 rounded-full font-semibold text-center hover:bg-[#d71720] transition">Discuss Defense Engineering</a>
+                  <a href="index.html#contact" class="border border-slate-300 text-[#0f2346] px-6 py-3 rounded-full font-semibold text-center hover:bg-white transition">Request Secure Consultation</a>
+                </div>
+              </div>
+              <div class="lg:col-span-5 lg:order-2 order-1">
+                <img src="img/defense.jpg" alt="Defense engineering systems" class="rounded-3xl w-full h-[320px] object-cover shadow-lg" />
+              </div>
+            </div>
+          </article>
+
+          <article class="industry-panel card-lift bg-white border border-slate-100 rounded-3xl p-8 lg:p-10">
+            <div class="relative z-10 grid lg:grid-cols-12 gap-8 items-center">
+              <div class="lg:col-span-5">
+                <img src="img/healthcare.jpg" alt="Healthcare engineering systems" class="rounded-3xl w-full h-[320px] object-cover shadow-lg" />
+              </div>
+              <div class="lg:col-span-7">
+                <p class="text-xs font-semibold text-[#ee1c25] tracking-[0.16em]">03</p>
+                <h3 class="text-2xl font-extrabold text-[#0f2346] mt-3">Healthcare</h3>
+                <p class="text-slate-600 mt-4 text-lg leading-relaxed">Healthcare technology requires engineering precision and reliability to support critical medical applications.</p>
+                <p class="text-slate-600 mt-3 text-lg leading-relaxed">Shlok supports engineering platforms for medical devices and healthcare infrastructure systems.</p>
+                <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                  <a href="index.html#services" class="bg-[#ee1c25] text-white px-6 py-3 rounded-full font-semibold text-center hover:bg-[#d71720] transition">Explore Healthcare Systems</a>
+                  <a href="index.html#contact" class="border border-slate-300 text-[#0f2346] px-6 py-3 rounded-full font-semibold text-center hover:bg-white transition">Initiate Medical Engineering Consultation</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="industry-panel card-lift bg-white border border-slate-100 rounded-3xl p-8 lg:p-10">
+            <div class="relative z-10 grid lg:grid-cols-12 gap-8 items-center">
+              <div class="lg:col-span-7 lg:order-1 order-2">
+                <p class="text-xs font-semibold text-[#ee1c25] tracking-[0.16em]">04</p>
+                <h3 class="text-2xl font-extrabold text-[#0f2346] mt-3">Telecom &amp; Communication</h3>
+                <p class="text-slate-600 mt-4 text-lg leading-relaxed">Telecom infrastructure requires scalable engineering systems that support high uptime and performance.</p>
+                <p class="text-slate-600 mt-3 text-lg leading-relaxed">Shlok supports engineering architecture for telecom networks, 5G infrastructure, and data centers.</p>
+                <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                  <a href="index.html#services" class="bg-[#ee1c25] text-white px-6 py-3 rounded-full font-semibold text-center hover:bg-[#d71720] transition">Architect Telecom Infrastructure</a>
+                  <a href="index.html#contact" class="border border-slate-300 text-[#0f2346] px-6 py-3 rounded-full font-semibold text-center hover:bg-white transition">Request Telecom Engineering Consultation</a>
+                </div>
+              </div>
+              <div class="lg:col-span-5 lg:order-2 order-1">
+                <img src="img/telecom.jpg" alt="Telecom and communication systems" class="rounded-3xl w-full h-[320px] object-cover shadow-lg" />
+              </div>
+            </div>
+          </article>
+
+          <article class="industry-panel card-lift bg-white border border-slate-100 rounded-3xl p-8 lg:p-10">
+            <div class="relative z-10 grid lg:grid-cols-12 gap-8 items-center">
+              <div class="lg:col-span-5">
+                <img src="img/industrial.jpg" alt="Industrial systems engineering" class="rounded-3xl w-full h-[320px] object-cover shadow-lg" />
+              </div>
+              <div class="lg:col-span-7">
+                <p class="text-xs font-semibold text-[#ee1c25] tracking-[0.16em]">05</p>
+                <h3 class="text-2xl font-extrabold text-[#0f2346] mt-3">Industrial Systems</h3>
+                <p class="text-slate-600 mt-4 text-lg leading-relaxed">Industrial environments require durable engineering solutions capable of operating under demanding conditions.</p>
+                <p class="text-slate-600 mt-3 text-lg leading-relaxed">Shlok supports automation, robotics, and manufacturing infrastructure systems.</p>
+                <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                  <a href="index.html#services" class="bg-[#ee1c25] text-white px-6 py-3 rounded-full font-semibold text-center hover:bg-[#d71720] transition">Explore Industrial Engineering</a>
+                  <a href="index.html#contact" class="border border-slate-300 text-[#0f2346] px-6 py-3 rounded-full font-semibold text-center hover:bg-white transition">Discuss Industrial Applications</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
+          <div>
+            <p class="text-[#ee1c25] text-sm tracking-[0.16em] font-semibold uppercase mb-4">Why Industry Context Matters</p>
+            <h2 class="title-md font-extrabold text-[#0f2346]">The Right Engineering Advice Depends on the Operating Environment</h2>
+          </div>
+          <p class="text-slate-600 max-w-2xl">Shlok brings systems thinking into sector-specific realities, helping teams make decisions that stand up to safety constraints, uptime expectations, deployment complexity, and scaling pressure.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="rounded-2xl p-7 border border-slate-200 bg-gradient-to-br from-white to-slate-50 card-lift">
+            <h3 class="text-xl font-bold text-[#0f2346]">Safety</h3>
+            <p class="text-slate-600 mt-3">We help teams design with reliability and operational risk in view from the start.</p>
+          </div>
+          <div class="rounded-2xl p-7 border border-slate-200 bg-gradient-to-br from-white to-slate-50 card-lift">
+            <h3 class="text-xl font-bold text-[#0f2346]">Performance</h3>
+            <p class="text-slate-600 mt-3">Architectures are evaluated for the load, uptime, and response expectations of each domain.</p>
+          </div>
+          <div class="rounded-2xl p-7 border border-slate-200 bg-gradient-to-br from-white to-slate-50 card-lift">
+            <h3 class="text-xl font-bold text-[#0f2346]">Scalability</h3>
+            <p class="text-slate-600 mt-3">We support platforms that must grow without introducing avoidable complexity or fragility.</p>
+          </div>
+          <div class="rounded-2xl p-7 border border-slate-200 bg-gradient-to-br from-white to-slate-50 card-lift">
+            <h3 class="text-xl font-bold text-[#0f2346]">Execution</h3>
+            <p class="text-slate-600 mt-3">Advice stays grounded in what engineering teams can actually implement and sustain.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space bg-[#0f2346] text-white">
+      <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[#fda4af] text-sm tracking-[0.16em] font-semibold uppercase mb-4">Let’s Talk</p>
+          <h2 class="title-md font-extrabold mb-6">Looking for Engineering Support in a Demanding Sector?</h2>
+          <p class="text-slate-200 leading-relaxed text-lg">Whether you are building vehicle systems, secure platforms, healthcare infrastructure, telecom networks, or industrial automation environments, Shlok Networks can help shape the right engineering path forward.</p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="index.html#contact" class="bg-[#ee1c25] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#d71720] transition text-center">Start a Conversation</a>
+            <a href="capabilities.html" class="border border-white/30 text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition text-center">Explore Capabilities</a>
+          </div>
+        </div>
+        <div>
+          <img src="img/why-choose.jpg" alt="Shlok Networks industry engagement" class="rounded-3xl shadow-2xl w-full object-cover" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#0f2346] text-white pt-14 pb-10">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+      <div>
+        <h4 class="font-bold text-xl mb-4">Shlok Networks</h4>
+        <p class="text-white/80">Engineering consulting and system architecture advisory for high-performance, scalable, and reliable technology systems.</p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-white/80">
+          <li><a href="index.html#home" class="hover:underline">Home</a></li>
+          <li><a href="aboutus.html" class="hover:underline">About Us</a></li>
+          <li><a href="capabilities.html" class="hover:underline">Capabilities</a></li>
+          <li><a href="industries-we-serve.html" class="hover:underline">Industries</a></li>
+          <li><a href="engagement-model.html" class="hover:underline">Engagement Model</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Contact</h4>
+        <p class="text-white/80">Email: info@shloknetworks.com</p>
+        <p class="text-white/80">Phone: +91 98765 43210</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+</body>
+</html>
